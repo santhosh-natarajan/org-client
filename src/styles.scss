@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/bootstrap/dist/css/bootstrap-grid.css');
+
+// html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.input-text-fullwidth { 
+    width: 100%;
+}
+.login-background { 
+    background-image: url('./assets/bg/bg_login.jpg');
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+    text-align: center;
+}
+
+.font-size-h1 { 
+    font-size: 32px;
+}
+
+.font-size-h2 { 
+    font-size: 30px;
+}
+
+.font-size-h3 { 
+    font-size: 28px;
+}
+
+.font-size-h4 { 
+    font-size: 26px;
+}
+
+.font-size-h5 { 
+    font-size: 24px;
+}
+
+.font-size-h6 { 
+    font-size: 22px;
+}
