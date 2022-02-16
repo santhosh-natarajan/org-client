@@ -1,49 +1,51 @@
     <div class="login-component">
         <div class="login-box">
             <div class="container box-bg">
-                <mat-card class="p-0">
-                    <div class="row">
-                        <div class="col m-5">
-                            <mat-card-title>Login</mat-card-title>
-                            <form>
-                                <div class="row mt-3">
-                                    <div class="col">
-                                        <mat-form-field class="input-text-fullwidth" apperance="fill">
-                                            <mat-label>Username</mat-label>
-                                            <input matInput type="text" placeholder="Your username" />
-                                            <mat-icon matSuffix>account_circle</mat-icon>
-                                        </mat-form-field>
+                <form [formGroup]="loginForm">
+                    <mat-card class="p-0">
+                        <div class="row">
+                            <div class="col m-5">
+                                <mat-card-title>Login</mat-card-title>
+                                <form>
+                                    <div class="row mt-3">
+                                        <div class="col">
+                                            <mat-form-field class="input-text-fullwidth" apperance="fill">
+                                                <mat-label>Username</mat-label>
+                                                <input matInput type="text" placeholder="Your username" formControlName="username" />
+                                                <mat-icon matSuffix>account_circle</mat-icon>
+                                            </mat-form-field>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col">
-                                        <mat-form-field class="input-text-fullwidth" apperance="fill">
-                                            <mat-label>Password</mat-label>
-                                            <input matInput type="password" placeholder="Your password" />
-                                            <mat-icon matSuffix>lock</mat-icon>
-                                        </mat-form-field>
+                                    <div class="row mt-3">
+                                        <div class="col">
+                                            <mat-form-field class="input-text-fullwidth" apperance="fill">
+                                                <mat-label>Password</mat-label>
+                                                <input matInput type="password" placeholder="Your password" formControlName="password" />
+                                                <mat-icon matSuffix>lock</mat-icon>
+                                            </mat-form-field>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="footer-bg mt-3">
-                                    <div>
-                                        <mat-checkbox>Remember me</mat-checkbox>
+                                    <div class="footer-bg mt-3">
+                                        <div>
+                                            <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+                                        </div>
+                                        <div>
+                                            <span>Forgot password?</span>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <span>Forgot password?</span>
+                                    <div class="row mt-3">
+                                        <div class="col">
+                                            <button type="button" mat-raised-button color="primary" (click)="onClickLogin()">Login</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col">
-                                        <button mat-raised-button color="primary">Login</button>
-                                    </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
+                            <div class="col login-background">
+                                <p class="text-center font-size-h1">Welcome</p>
+                            </div>
                         </div>
-                        <div class="col login-background">
-                            <p class="text-center font-size-h1">Welcome</p>
-                        </div>
-                    </div>
-                </mat-card>
+                    </mat-card>
+                </form>
             </div>
         </div>
     </div>
