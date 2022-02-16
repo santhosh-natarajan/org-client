@@ -11,8 +11,9 @@
                                         <div class="col">
                                             <mat-form-field class="input-text-fullwidth" apperance="fill">
                                                 <mat-label>Username</mat-label>
-                                                <input matInput type="text" placeholder="Your username" formControlName="username" />
+                                                <input matInput type="text" placeholder="Your username" formControlName="username" [errorStateMatcher]="matcher" />
                                                 <mat-icon matSuffix>account_circle</mat-icon>
+                                                <mat-error *ngIf="matcher">Please enter valid username</mat-error>
                                             </mat-form-field>
                                         </div>
                                     </div>
@@ -20,8 +21,9 @@
                                         <div class="col">
                                             <mat-form-field class="input-text-fullwidth" apperance="fill">
                                                 <mat-label>Password</mat-label>
-                                                <input matInput type="password" placeholder="Your password" formControlName="password" />
+                                                <input matInput type="password" placeholder="Your password" formControlName="password" [errorStateMatcher]="matcher" />
                                                 <mat-icon matSuffix>lock</mat-icon>
+                                                <mat-error *ngIf="matcher">Please password</mat-error>
                                             </mat-form-field>
                                         </div>
                                     </div>

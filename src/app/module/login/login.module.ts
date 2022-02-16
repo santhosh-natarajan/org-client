@@ -8,6 +8,8 @@ import { LoginRoutingModule } from './login-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule} from '@angular/material/checkbox'
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule} from '@angular/material/snack-bar'
+import { AuthenticationService } from 'src/app/service/authentication.service';
 
 
 
@@ -23,10 +25,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginRoutingModule,
     MatIconModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   exports: [
     PageLoginComponent
-  ]
+  ],
+  providers: [AuthenticationService]
 })
 export class LoginModule { }
